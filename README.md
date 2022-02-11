@@ -30,3 +30,6 @@ an SD-Card:
 ```
 dd if=images/sdcard.img of=/dev/sdX bs=1M status=progress && sync
 ```
+
+Attach a UART to either the LicheeRV board proper or to the 40-pin header on the dock. The
+default login is ```root``` with no password. 
