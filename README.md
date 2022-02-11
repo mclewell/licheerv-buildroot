@@ -5,15 +5,23 @@ used by the Allwinner D1 processor. The repo contains a buildroot configuration
 based off the work in [this Github repo](https://github.com/maquefel/licheerv-boot-build).
 
 ## Usage
+Install the build host prerequisites (Ubuntu 20.04):
+```
+sudo apt install sed make binutils gcc g++ bash patch gzip bzip2 perl tar \
+	cpio python unzip rsync wget libncurses-dev swig
+```
+
 Clone this repo and initialize submoudles:
 ```
 git clone https://github.com/mclewell/licheerv-buildroot.git
 git submodule update --init
 ```
+
 Create output directory and build SD-Card image for the board:
 ```
 cd buildroot
 mkdir output-licheerv
+cd output-licheerv
 make -C ../ O=$(pwd) BR2_EXTERNAL=$PWD/../../ licheerv_defconfig
 ```
 
