@@ -1,3 +1,0 @@
-menu "Side-Channel Testing"
-    source "$BR2_EXTERNAL_LICHEERV_PATH/package/pinata/Config.in"
-endmenu
