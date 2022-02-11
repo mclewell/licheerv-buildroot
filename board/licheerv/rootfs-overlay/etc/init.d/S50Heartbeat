@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Set RGB LED to a light blue color with a hearbeat trigger
+#
+
+echo heartbeat > /sys/class/leds/rgb\:indicator/trigger
+echo 43 226 138 > /sys/class/leds/rgb\:indicator/multi_intensity
+echo 64 > /sys/class/leds/rgb\:indicator/brightness
+
+exit $?
